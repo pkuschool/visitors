@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>高一家长会</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
@@ -20,24 +20,35 @@
         h1 {
             padding-top: 20px;
             padding-bottom: 20px;
+            font-size: 3.7rem
         }
 
         .btn-large {
             font-size: 24px;
         }
+
+        p {
+            margin-bottom: 0.5em !important;
+        }
+
+        .row {
+            margin-top: 20px !important;
+        }
     </style>
 </head>
 
-<body class="accent">
-    <div class="container transparent green-text text-lighten-5 center-align">
-        <h1>本部高一家长会</h1>
-        <div class="divider"></div>
-        <h2 id="currentTitle">{{titleContent}}</h1>
-            <p id="msg">{{msg}}</p>
-            <div class="row">
-                <button id="submitform" class="btn-large green green-text text-lighten-5" v-if="visible" onclick="goforms()">提交志愿</button>
-                <button id="seeresults" class="btn-large green green-text text-lighten-5" v-if="visible" onclick="goexcel()">查看结果</button>
-            </div>
+<body class="green lighten-5">
+    <div class="container transparent green-text text-darken-4 center-align">
+        <h1>高一</h1>
+        <div class="divider green darken-4"></div>
+        <p id="currentTitle" style="font-size: 3rem">{{titleContent}}</p>
+        <p id="msg" class="flow-text" style="margin-bottom: 1em">{{msg}}</p>
+        <div class="row">
+            <button id="submitform" class="btn-large green green-text text-lighten-5" v-if="visible"
+                onclick="goforms()">去提交志愿</button>
+            <button id="seeresults" class="btn-large green green-text text-lighten-5" v-if="visible"
+                onclick="goexcel()">去查看结果</button>
+        </div>
     </div>
 </body>
 <script>
@@ -52,14 +63,14 @@
             Infinity
         ],
         title: [
-            "敬请期待", "填写志愿时间", "填写志愿已结束, 等待后续开放", "已经排完了！请查看结果", "今天是开放日", "本次活动已结束"
+            "敬请期待", "填写志愿", "等待结果", "查看结果", "与老师交谈", "感谢关注"
         ],
         msg: [
             "将于5月22日举行高一家长会，5月27日举行高二家长会。",
             "本部高一家长请填写志愿，截止5月17日17：00。请不要重复填写",
             "正在安排中，请耐心等待下一步进展",
             "请查看结果后，为开放日做好准备",
-            "北大附中欢迎您！不要忘了开放日的事情哦",
+            "不要忘了开放日的事情哦",
             "感谢参与，下次再见"
         ]
     }
@@ -96,7 +107,7 @@
     var theexcel = new Vue({
         el: "#seeresults",
         data: {
-            visible: res == 3
+            visible: res >= 3 && res <= 5
         }
     })
 

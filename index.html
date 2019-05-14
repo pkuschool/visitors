@@ -20,24 +20,34 @@
         h1 {
             padding-top: 20px;
             padding-bottom: 20px;
+            font-size: 3.7rem
         }
 
         .btn-large {
-            font-size: 24px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        p {
+            margin-bottom: 0.5em !important;
         }
     </style>
 </head>
 
-<body class=" black white-text">
+<body class=" grey lighten-4 black-text">
     <div class="container center-align">
         <h1>北大附中家长会</h1>
-        <div class="divider"></div>
-        <h2>请问您的孩子的年级是？</h2>
+        <div class="divider grey darken-3"></div>
+        <p style="font-size: 3rem">请选择年级</p>
         <button id="submitform" class="btn-large grey darken-2 grey-text text-lighten-5" v-if="visible"
             onclick="go('10')">本部高一（学号212开头）</button>
         <button id="submitform" class="btn-large grey darken-2 grey-text text-lighten-5" v-if="visible"
                onclick="go('11')">本部高二（学号202开头）</button>
-        <p class="grey-text text-darken-1">Powered By SubIT</p>
+        <p class="grey-text text-darken-1">Made By SubIT</p>
+        <p class="grey-text text-darken-1">Powered By Vue, Materialize and Web Tech</p>
+        <p class="grey-text text-darken-1">Hosted in <a href="https://pkuschool.github.io">GitHub</a></p>
     </div>
 </body>
 <script>
