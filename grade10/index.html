@@ -27,12 +27,13 @@
             font-size: 24px;
         }
 
-        p {
+        /* p {
             margin-bottom: 0.5em !important;
-        }
+        } */
 
         .row {
             margin-top: 20px !important;
+             margin-bottom: 50px !important;
         }
     </style>
 </head>
@@ -48,16 +49,104 @@
                 onclick="goforms()">去提交志愿</button>
             <button id="seeresults" class="btn-large green green-text text-lighten-5" v-if="visible"
                 onclick="goexcel()">去查看结果</button>
+            <button id="seeclassroom" class="btn-large green green-text text-lighten-5" v-if="visible"
+                onclick="goeclassroom()">查看教师所在教室</button>
         </div>
     </div>
+    <div class="divider green darken-4"></div>
+    <br><br>
+    <div class="container transparent green-text text-darken-4">
+        <h2>高一年级家长交流日邀请函</h3>
+        <p>尊敬的高一年级同学家长，您好！</p>
+        <p>第三学段段考已经结束了，截止到5月11日，所有的科目成绩都已发布，请家长尽快查看，了解孩子的学业情况。北大附中定于5月22日（周三）下午举办本部高一学生家长交流日活动，请各位家长百忙中予以关注和参与！</p>
+        <p>为提高家校沟通效率，学校希望家长在与老师沟通之前充分了解学生在第三学段的学习情况，并提出具体沟通的问题；同时，因当日时间所限，我们会根据家长问卷（见下）填写情况重点安排1对1沟通，当日未能满足者，教师后续会继续跟进与相关家长的沟通。
+        </p>
+        <h3>一、查看学生学习情况</h3>
+        <p>您可以通过家长端登录CHALK系统，查阅孩子的课程学习情况，包括考勤情况、各科过程性评价、段考成绩和报告、学生的学段反思等。</p>
+        <p>您可以登陆学生的账号，查阅通知栏目中的内容，每个学生的学期数据报告已经发送，您可以看到学生第三学段所有科目的考试成绩、排名、过评项目、过评占比和完成情况，以及学生的学段反思和任课教师的回复。</p>
+        <p>希悦账号登陆操作教程见：<a href="https://shimo.im/docs/eeHr6R2PbDsiXttu/">这里</a></a></p>
+        <p>请您务必在本周内了解孩子第三学段的学习情况！</p>
+        <h3>二、家长调研问卷</h3>
+        <p>请各位家长在5月17日（周五）下午17：00前完成家长调研问卷，我们将根据调研数据做1对1咨询的时间安排。</p>
+        <p>请您在交流日前一天5月21日（周二）晚些时候，在此网站关注咨询安排，并根据时间要求准时与相应老师面谈。届时楼道会有学生志愿者引导。</p>
+        <h3>三、交流日当天安排</h3>
+        <h4>1、教师1对1咨询（13：30-16：30）</h4>
+        <p>咨询将根据问卷数据安排，请5月21日（周二）晚些时候关注。</p>
+        <p>各教师的教室安排，请看这里（电脑上点击图片可放大，手机上请点击查看原图）：</p>
+        <button class="btn" type="button" onclick="window.open('./classroom.png', '_blank')">查看原图</button>
+        <img src="./classroom.png" alt="" class="materialboxed" width="100%">
+        <h4> 2、学院长接待（13：30-16：30）</h4>
+        <p>其中本部确定出国方向的同学和尚在犹豫的同学，请家长13：00到图书馆报告厅开会，高一国际升学顾问杨玉婷老师会跟大家讲出国申请相关安排和要求。</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>时间</th>
+                    <th>地点</th>
+                    <th>主讲人</th>
+                    <th>对象、内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>13：00 ~ 13：30</th>
+                    <th>图书馆报告厅</th>
+                    <th>杨玉婷老师</th>
+                    <th>本部出国学生家长</th>
+                </tr>
+                <tr>
+                    <th>13：00 ~ 16：30</th>
+                    <th>图书馆报告厅</th>
+                    <th>景志国副校长</th>
+                    <th>高中学习规划和学习评价</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>行知学院办公室（高中楼4层）</th>
+                    <th>李冬梅副校长</th>
+                    <th>行知学院课程</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>元培学院办公室（高中楼2层）</th>
+                    <th>邵壮院长</th>
+                    <th>元培学院课程</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>成长中心办公室（高中楼1层）</th>
+                    <th>孙玉磊院长</th>
+                    <th>博雅学院课程</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>心灵小屋（图书馆3层）</th>
+                    <th>曲小军老师</th>
+                    <th>学生心理健康、亲子关系指导</th>
+                </tr>
+            </tbody>
+        </table>
+        <h4>3、书院开放活动（13：30-16：30）</h4>
+        <p>届时高中各书院也向家长开放，书院自治会主席负责接待您的参观访问。</p>
+        <h4>4、家长会反馈</h4>
+        <p>当日活动结束，离校之前，烦请家长扫描西门处二维码，填写本次家校沟通的反馈问卷。</p>
+        <p>真诚地希望通过这次家长交流活动以及后续借助家委会机制的常态化沟通，学校和家长共同助力孩子在学习和成长方面取得长足进步！</p>
+        <p class=" right-align right">北京大学附属中学<br>2019年5月15日
+</p>
+        <br><br><br>
+    </div>
+
 </body>
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems);
+    });
     var textData = {
         timefrom: [
             0,
             1557801786, //临时
-            1558112400,
-            1558310400, //临时
+            1558199220,
+            1558444020, //临时
             1558483200,
             1558569600,
             Infinity
@@ -69,7 +158,7 @@
             "将于5月22日举行高一家长会，5月29日举行高二家长会。",
             "本部高一家长请填写志愿，截止5月17日17：00。请不要重复填写",
             "正在安排中，请耐心等待下一步进展",
-            "请查看结果后，为家长交流日做好准备",
+            "请查看结果后，为家长交流日做好准备。没有在此次面谈中安排的家长，我们也根据大家提出的需求由课任教师制定沟通方案，请家长用学生账号登录希悦CHALK系统，可以看到每位教师给您反馈的沟通方式，大家可以按教师提供的方式与课任教师在其他时间联系沟通",
             "不要忘了家长交流日的事情哦",
             "感谢参与，下次再见"
         ]
@@ -122,6 +211,12 @@
             html: "尚未开放"
         })
     }
+    var theclassroom = new Vue({
+        el: "#seeclassroom",
+        data: {
+            visible: res >= 3 && res <= 6
+        }
+    })
 </script>
 
 </html>
