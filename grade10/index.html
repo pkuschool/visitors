@@ -49,8 +49,6 @@
                 onclick="goforms()">去提交志愿</button>
             <button id="seeresults" class="btn-large green green-text text-lighten-5" v-if="visible"
                 onclick="goexcel()">去查看结果</button>
-            <button id="seeclassroom" class="btn-large green green-text text-lighten-5" v-if="visible"
-                onclick="goeclassroom()">查看教师所在教室</button>
         </div>
     </div>
     <div class="divider green darken-4"></div>
@@ -70,12 +68,12 @@
             <p>请各位家长在5月17日（周五）下午17：00前完成家长调研问卷，我们将根据调研数据做1对1咨询的时间安排。</p>
             <p>请您在交流日前一天5月21日（周二）晚些时候，在此网站关注咨询安排，并根据时间要求准时与相应老师面谈。届时楼道会有学生志愿者引导。</p>
             <h3>三、交流日当天安排</h3>
-            <h4>1、教师1对1咨询（13：30-16：30）</h4>
+            <h4>1.教师1对1咨询（13：30-16：30）</h4>
             <p>咨询将根据问卷数据安排，请5月21日（周二）晚些时候关注。</p>
             <p>各教室的教师安排，请看这里（电脑上点击图片可放大，手机上请点击查看原图）：</p>
             <button class="btn" type="button" onclick="window.open('./classroom.png', '_blank')">查看原图</button>
             <img src="./classroom.png" alt="" class="materialboxed" width="100%">
-            <h4> 2、学院长接待（13：30-16：30）</h4>
+            <h4>2.学院长接待（13：30-16：30）</h4>
             <p>其中本部确定出国方向的同学和尚在犹豫的同学，请家长13：00到图书馆报告厅开会，高一国际升学顾问杨玉婷老师会跟大家讲出国申请相关安排和要求。</p>
             <table>
                 <thead>
@@ -88,46 +86,46 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>13：00 ~ 13：30</th>
+                        <th>13:00~13:30</th>
                         <th>图书馆报告厅</th>
                         <th>杨玉婷老师</th>
                         <th>本部出国学生家长</th>
                     </tr>
                     <tr>
-                        <th>13：30 ~ 16：30</th>
+                        <th>13:30~16:30</th>
                         <th>图书馆报告厅</th>
                         <th>景志国副校长</th>
                         <th>高中学习规划和学习评价</th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>行知学院办公室（高中楼4层）</th>
+                        <th>行知学院办公室<br>（高中楼4层）</th>
                         <th>李冬梅副校长</th>
                         <th>行知学院课程</th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>元培学院办公室（高中楼2层）</th>
+                        <th>元培学院办公室<br>（高中楼2层）</th>
                         <th>邵壮院长</th>
                         <th>元培学院课程</th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>成长中心办公室（高中楼1层）</th>
+                        <th>成长中心办公室<br>（高中楼1层）</th>
                         <th>孙玉磊院长</th>
                         <th>博雅学院课程</th>
                     </tr>
                     <tr>
                         <th></th>
-                        <th>心灵小屋（图书馆3层）</th>
+                        <th>心灵小屋<br>（图书馆3层）</th>
                         <th>曲小军老师</th>
                         <th>学生心理健康、亲子关系指导</th>
                     </tr>
                 </tbody>
             </table>
-            <h4>3、书院开放活动（13：30-16：30）</h4>
+            <h4>3.书院开放活动（13：30-16：30）</h4>
             <p>届时高中各书院也向家长开放，书院自治会主席负责接待您的参观访问。</p>
-            <h4>4、家长会反馈</h4>
+            <h4>4.家长会反馈</h4>
             <p>当日活动结束，离校之前，烦请家长扫描西门处二维码，填写本次家校沟通的反馈问卷。</p>
             <p>真诚地希望通过这次家长交流活动以及后续借助家委会机制的常态化沟通，学校和家长共同助力孩子在学习和成长方面取得长足进步！</p>
             <p class=" right-align right">北京大学附属中学<br>2019年5月15日</p>
@@ -147,9 +145,9 @@
     var textData = {
         timefrom: [
             0,
-            1557801786, //临时
+            1557801786, //开始
             1558199220,
-            1558444020, //临时
+            1558444020, //出结果
             1558483200,
             1558569600,
             Infinity
@@ -220,12 +218,6 @@
             html: "尚未开放"
         })
     }
-    var theclassroom = new Vue({
-        el: "#seeclassroom",
-        data: {
-            visible: res >= 3 && res <= 6
-        }
-    })
 </script>
 
 </html>
