@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人访客</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <style>
+        .accent {
+            background-color: #0b660e;
+        }
+
+        body {
+            font-family: "PingFang SC", "思源黑体", "Microsoft Yahei UI", sans-serif;
+        }
+
+        h1 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 3.7rem
+        }
+
+        .btn-large {
+            font-size: 24px;
+        }
+
+        /* p {
+            margin-bottom: 0.5em !important;
+        } */
+
+        .row {
+            margin-top: 20px !important;
+            margin-bottom: 50px !important;
+        }
+    </style>
+</head>
+
+<body class="green lighten-5">
+    <div class="container transparent green-text text-darken-4 center-align">
+        <h1>高一</h1>
+        <div class="divider green darken-4"></div>
+        <p id="currentTitle" style="font-size: 3rem">{{titleContent}}</p>
+        <p id="msg" class="flow-text" style="margin-bottom: 1em">{{msg}}</p>
+        <div class="row">
+            <button id="submitform" class="btn-large green green-text text-lighten-5" v-if="visible"
+                onclick="goforms()">去提交志愿</button>
+            <button id="seeresults" class="btn-large green green-text text-lighten-5" v-if="visible"
+                onclick="goexcel()">去查看结果</button>
+        </div>
+    </div>
+    <div class="divider green darken-4"></div>
+    <br><br>
+    <div class="container transparent green-text text-darken-4">
+        <iframe width="640px" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=dvGcSe515EmAwVKvzSjStX_OJCfvpMRDiZr_vPuTJPBUOUZLWTlJS0lWUjQ2NTVXWEhMN09FV0I1Uy4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+</html>
